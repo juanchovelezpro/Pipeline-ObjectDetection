@@ -19,7 +19,7 @@ mkdir annotations
 mkdir exported-models
 mkdir images
 mkdir models
-mkdir pre-trained-models
+mkdir pre-trained-model
 cd annotations
 cp /home/bragapo23/Pipeline-ObjectDetection/files/label_map.pbtxt .
 echo "Downloading train.record"

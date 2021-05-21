@@ -6,6 +6,7 @@ rm ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz
 cd ..
 cd models
 mkdir my_ssd_resnet50_v1_fpn
+cd my_ssd_resnet50_v1_fpn
 cp /home/bragapo23/Pipeline-ObjectDetection/files/pipeline.config .
 cd /home/bragapo23/TensorFlow
 
