@@ -37,7 +37,7 @@ protoc object_detection/protos/*.proto --python_out=.
 
 echo "Installing Object Detection API"
 cp object_detection/packages/tf2/setup.py .
-python3 -m pip3 install .
+python3 -m pip install .
 
 echo "Test Object Detection API"
 python3 object_detection/builders/model_builder_tf2_test.py
