@@ -9,7 +9,7 @@ sudo apt install wget -y
 echo "Building pipeline in folder -> $path/TensorFlow" 
 cd $path/TensorFlow/workspace/training_demo/pre-trained-model
 echo "Downloading pre-trained-model"
-wget $preTrainedModel
+wget $linkPreTrainedModel
 tar -xf $tarPreTrainedModel
 rm $tarPreTrainedModel
 cd ..
