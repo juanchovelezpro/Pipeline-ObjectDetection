@@ -2,8 +2,6 @@ path=$(pwd)
 trainRecord=https://drive.google.com/uc?id=1Kl4dv4tg4ppFYfZebuo9WkHpSngkAXYa
 valRecord=https://drive.google.com/uc?id=1Kn9Xbeurba9a5iBt0l8GsCrHwn5hFLE_
 
-
-
 echo "Setup pipeline in folder -> $path/TensorFlow"
 
 echo "Installing gdown"

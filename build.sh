@@ -3,6 +3,9 @@ linkPreTrainedModel=http://download.tensorflow.org/models/object_detection/tf2/2
 tarPreTrainedModel=ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz
 nameCustomModel=my_ssd_resnet50_v1_fpn
 
+echo "Installing wget"
+sudo apt install wget -y
+
 echo "Building pipeline in folder -> $path/TensorFlow" 
 cd $path/TensorFlow/workspace/training_demo/pre-trained-model
 echo "Downloading pre-trained-model"
@@ -31,3 +34,10 @@ pip3 install Cython pandas tf-slim lvis
 echo "Compiling protobuf libraries"
 cd $path/TensorFlow/models/research/
 protoc object_detection/protos/*.proto --python_out=.
+
+echo "Installing Object Detection API"
+cp object_detection/packages/tf2/setup.py .
+python3 -m pip3 install .
+
+echo "Test Object Detection API"
+python3 object_detection/builders/model_builder_tf2_test.py
