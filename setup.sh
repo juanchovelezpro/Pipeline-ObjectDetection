@@ -2,10 +2,14 @@ path=$(pwd)
 trainRecord=https://drive.google.com/uc?id=1Kl4dv4tg4ppFYfZebuo9WkHpSngkAXYa
 valRecord=https://drive.google.com/uc?id=1Kn9Xbeurba9a5iBt0l8GsCrHwn5hFLE_
 
+
+
 echo "Setup pipeline in folder -> $path/TensorFlow"
 
 echo "Installing gdown"
 pip3 install gdown
+echo "Setting up gdown"
+export PATH=/home/$(whoami)/.local/bin:$PATH
 
 echo "Creating folders and files"
 mkdir TensorFlow
@@ -30,7 +34,6 @@ cd annotations
 echo "Copying custom label map"
 cp $path/Pipeline-ObjectDetection/files/label_map.pbtxt .
 echo "Downloading train.record"
-export PATH=$path/.local/bin
 gdown $trainRecord
 echo "Downloading test.record"
 gdown $valRecord
